@@ -6,7 +6,7 @@ Challenger stress-tests your ideas before reality does. Give it a thesis, decisi
 
 ## What It Does
 
-1. **Decomposes** your thesis into discrete, testable claims
+1. **Decomposes** your thesis into discrete, testable claims, flagging any unfalsifiable statements or claims
 2. **Steelmans the opposition** — argues forcefully against each claim using deduction, inversion, base rate analysis, pre-mortems, historical analogies, incentive analysis, and more
 3. **Researches** when claims are empirical — uses web search to ground arguments in evidence, not vibes
 4. **Reveals** its honest assessment after arguing both sides
