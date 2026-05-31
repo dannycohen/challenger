@@ -10,7 +10,7 @@ Challenger stress-tests your ideas before reality does. Give it a thesis, decisi
 2. **Steelmans the opposition** — argues forcefully against each claim using deduction, inversion, base rate analysis, pre-mortems, historical analogies, incentive analysis, and more
 3. **Researches** when claims are empirical — uses web search to ground arguments in evidence, not vibes
 4. **Reveals** its honest assessment after arguing both sides
-5. **Verdicts** each claim: Verified, Refuted, Partially Verified, or Unresolved (with confidence levels)
+5. **Verdicts** each claim: Verified, Refuted, Partially Verified, Unresolved, or Unfalsifiable (with confidence levels)
 6. **Maps assumption chains** — drills down to testable assumptions with specific verification methods
 7. **Produces a prediction document** with specific, falsifiable predictions and review dates
 
@@ -32,6 +32,7 @@ Most AI assistants are agreeable by default. Challenger is not. It will:
 - **Produce falsifiable predictions** — not "revenue might go up" but "mid-tier revenue increases 20-40% within 6 months"
 - **Persist across long sessions** — writes a scorecard file that survives context window limits
 - **Resume previous sessions** — pick up where you left off days or weeks later
+- **Check falsifiability up front** (1.1.0) — during intake, every claim is tested for whether any conceivable evidence could disprove it. Unfalsifiable claims get flagged with a suggested rewording you can accept, replace, or keep as-is; kept-as-is claims receive an `Unfalsifiable` verdict at decision time instead of blocking the session.
 
 ## Session Artifacts
 
@@ -42,12 +43,13 @@ Challenger produces two files per session:
 
 ## Installation
 
-In Claude Code, run:
+Clone this repo into your Claude Code skills directory:
 
 ```
-/plugin marketplace add eranshir/challenger
-/plugin install challenger@challenger
+git clone https://github.com/dannycohen/challenger.git ~/.claude/skills/challenger
 ```
+
+The skill loads the next time Claude Code starts. To update later, run `git pull` inside that directory.
 
 ## Usage
 
