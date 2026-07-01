@@ -4,6 +4,32 @@
 
 Challenger stress-tests your ideas before reality does. Give it a thesis, decision, or strategy — it will decompose it into testable claims, argue the strongest opposing position it can construct, then drop the act and tell you what it actually thinks.
 
+## How It Works
+
+Challenger follows a structured protocol, flowing left to right from intake to the final documents:
+
+```mermaid
+flowchart LR
+    A[Intake:<br/>thesis, decision,<br/>or document] --> B{Single claim or<br/>quick take?}
+    B -->|Yes| C[Quick-challenge:<br/>one claim, no files]
+    B -->|No| D[Decompose into<br/>claims + falsifiability<br/>check]
+    D --> E[Create<br/>scorecard file]
+    E --> F
+
+    subgraph Per-claim sparring cycle
+        F[Steelman<br/>opposition] --> G[Dialogue]
+        G --> H[Research<br/>if empirical]
+        H --> I[Reveal<br/>honest take]
+        I --> J[Verdict +<br/>confidence]
+        J --> K[Assumption<br/>chain: opt-in]
+    end
+
+    C --> F
+    K -->|More claims| F
+    K -->|Done| L[Updated<br/>scorecard]
+    L --> M[Prediction<br/>document]
+```
+
 ## What It Does
 
 1. **Decomposes** your thesis into discrete, testable claims, flagging any unfalsifiable statements or claims
@@ -68,18 +94,6 @@ Then present your thesis, decision, or document.
 - **"generate prediction doc"** — get the prediction document at any point
 - **"resume challenger"** — continue a previous session
 
-## How It Works
-
-Challenger follows a structured protocol:
-
-```
-Intake → Decompose into claims → Create scorecard
-    ↓
-For each claim:
-    Steelman opposition → Dialogue → Research (if needed) → Reveal → Verdict → Assumption chain
-    ↓
-Final output: Updated scorecard + Prediction document
-```
 
 ### Reasoning Tools Used
 
